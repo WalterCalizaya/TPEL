@@ -2,27 +2,12 @@
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/login','Auth\LoginController@showLoginForm')->name('login');
-
-
-
-
-
-
     Route::get('/password/reset','Auth\ForgotPasswordController@showLinkRequestForm');
     Route::get('/password/reset/{token}','Auth\ResetPasswordController@showResetForm')->name('password.reset');
 });
 
-
-
-
 Route::post('/login','Auth\LoginController@login');
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
-
-
-
-
-
-
 Route::post('/password/email','Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 Route::post('/password/reset/{token}','Auth\ResetPasswordController@reset')->name('password.request');
 
@@ -34,6 +19,10 @@ Route::post('/registro-usuario','Auth\RegisterController@register_usuario');
 
 //confirmacion
 Route::get('/registro/verificar/{code}','Auth\RegisterController@verificar');
+
+
+
+
 
 Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->group(function(){

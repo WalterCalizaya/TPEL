@@ -80,15 +80,15 @@ class ResetPasswordController extends Controller
             $user->save();
             $ant->delete();
             if (Auth::loginUsingId($user->id)) {
-                toast('Contraseña reestablecida correctamente','success','center');
+                alert()->success('¡Yeah!','Volviste a tener acceso a tu cuenta')->autoClose(3000)->showCloseButton();
                 if (Auth::user()->tipo==1) {
                     return redirect('/admin/dashboard');
                 }
-                elseif (Auth::user()->tipo==2) {
+                elseif (Auth::user()->tipo==2 || Auth::user()->tipo==3) {
                     return redirect('/admin/usuario');
                 }
                 else{
-                    return redirect('/admin/empresa');
+                    return redirect('/');
                 }
             }
         }

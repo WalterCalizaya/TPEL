@@ -131,9 +131,9 @@
 	                <h4><span class="label label-success">{{ Auth::user()->tipo == 2 ? 'Plan Full' : 'Plan gratuito' }}</span></h4>
 	                <ul>
 	                    <li><a href="{{ url('/admin/usuario') }}">Panel de usuario</a></li>
-	                    <li><a href="{{ url('/admin/usuario/perfil') }}">Perfil</a></li>
-	                    <li><a href="{{ url('/admin/usuario/perfil/modificar') }}">Editar perfil</a></li>
-	                    <li><a href="{{ url('admin/usuario/mis-compras') }}">Historial de compras</a></li>
+	                    <li><a href="{{ url('/usuario/perfil') }}">Perfil</a></li>
+	                    <li><a href="{{ url('/usuario/perfil/modificar') }}">Editar perfil</a></li>
+	                    <li><a href="{{ url('/usuario/mis-compras') }}">Historial de compras</a></li>
 	                    <li>
 	                    	<a href="#">
 	                    		<form action="{{ url('/logout') }}" method="post">

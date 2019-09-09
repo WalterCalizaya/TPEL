@@ -52,7 +52,7 @@ Inicio de sesión
 								</button>
 							</div>
 						</div>
-						<p class="link-bottom">¿Todavía no estás registrado? <a href="{{ url('/registro-usuario') }}">Hazlo ahora</a></p>
+						<p class="link-bottom">¿Todavía no estás registrado? <a href="{{ url('/registro-usuario') }}">¡Hazlo ahora!</a></p>
 					</div>
 				</form>
 			</div>

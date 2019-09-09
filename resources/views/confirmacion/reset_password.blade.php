@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
 	<meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-	<title>Reestablecer contraseña - Tacnatel</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+	<title>Reestablecer contraseña - Tu Profe en Línea</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
 	<!-- Web Font / @font-face : BEGIN -->
 	<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
@@ -232,7 +232,7 @@
 
     <!-- Visually Hidden Preheader Text : BEGIN -->
     <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
-    	Reestablece tu contraseña de EnTacna
+    	Reestablece tu contraseña de Tu Profe en Línea
     </div>
     <!-- Visually Hidden Preheader Text : END -->
 
@@ -261,7 +261,7 @@
             	<!-- Email Header : BEGIN -->
             	<tr>
             		<td style="padding: 20px 0; text-align: center">
-            			<img src="{{ url('/resources/admin/assets/images/logo.png') }}" width="175" alt="Tacnatel" border="0" style="height: auto; background: #004A99; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #ffffff;">
+            			<img src="{{ url('/assets/img/logo-light.png') }}" width="175" alt="TuProfeEnLinea" border="0" style="height: auto; background: #004A99; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #ffffff;">
             		</td>
             	</tr>
             	<!-- Email Header : END -->
@@ -302,7 +302,7 @@
                       		<tr>
                       			<td dir="ltr" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0; text-align: left;" class="center-on-narrow">
                       				<h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 22px; color: #333333; font-weight: bold;">Restablecer contraseña</h2>
-                      				<p style="margin: 0 0 10px 0;"><strong>Has solicitado restablecer tu contraseña en nuestro sitio, para ello debes hacer click en el siguiente enlace:</strong></p>
+                      				<p style="margin: 0 0 10px 0;"><strong>Has solicitado restablecer tu contraseña en nuestro sitio, para ello debes hacer clic en el siguiente enlace:</strong></p>
                       				<!-- Button : BEGIN -->
                       				<table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
                       					<tr>
@@ -348,7 +348,7 @@
           			<tr>
           				<td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
           					<p style="margin: 0 0 10px 0;">Si no hiciste esta solicitud, <a href="{{ url('/contacto') }}"><strong>contacta con nosotros</strong></a> inmediatamente.</p>
-          					<p style="margin: 0 0 10px 0;">Atentamente,<br /><strong>El equipo de Tacnatel</strong></p>
+          					<p style="margin: 0 0 10px 0;">Atentamente,<br /><strong>El equipo de Tu Profe en Línea.</strong></p>
           				</td>
           			</tr>
           		</table>
@@ -371,7 +371,7 @@
         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 680px;">
         	<tr>
         		<td style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #888888;">
-        			&copy; Tacnatel.pe<br><span class="unstyle-auto-detected-links">{{ $configuracion->direccion }}<br>{{ $configuracion->telefono }}</span>
+        			&copy; tuprofeenlinea.com<br><span class="unstyle-auto-detected-links">{{ $configuracion->direccion }}<br>{{ $configuracion->telefono }}</span>
         		</td>
         	</tr>
         </table>

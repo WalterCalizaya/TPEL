@@ -84,7 +84,7 @@ class ForgotPasswordController extends Controller
         $data['configuracion']=Configuracion::find(1);
 
         Mail::send('confirmacion.reset_password', $data, function($message) use ($data){
-            $message->to($data['email'],$data['nombres'])->subject('Reestablecer contraseña - Tacnatel');
+            $message->to($data['email'],$data['nombres'])->subject('Reestablecer contraseña - Tu Profe en Línea');
         });
     }
 }

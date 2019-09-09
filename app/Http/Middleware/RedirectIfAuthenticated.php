@@ -21,11 +21,11 @@ class RedirectIfAuthenticated
             if(Auth::user()->tipo==1){
                 return redirect('/admin/dashboard');
             }
-            else if(Auth::user()->tipo==2){
+            else if(Auth::user()->tipo==2 || Auth::user()->tipo==3){
                 return redirect('/admin/usuario');
             }
             else{
-                return redirect('/admin/empresa');
+                return redirect('/');
             }
         }
         return $next($request);

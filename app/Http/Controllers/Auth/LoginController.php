@@ -66,7 +66,7 @@ class LoginController extends Controller
                 if (Auth::user()->tipo==1) {
                     return redirect('/admin/dashboard');
                 }
-                elseif (Auth::user()->tipo==2) {
+                elseif (Auth::user()->tipo==2 || Auth::user()->tipo==3) {
                     return redirect('/admin/usuario/');
                 }
                 else{
