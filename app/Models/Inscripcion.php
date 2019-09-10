@@ -11,7 +11,7 @@ class Inscripcion extends Model
     protected $guarded = [];
 
     public function detalles(){
-        return $this->hasMany('App\Models\DetalleInscripcion','inscripcion_id')->with('evento');
+        return $this->hasMany('App\Models\DetalleInscripcion','inscripcion_id')->with('ciclo');
     }
 
     public function usuario(){

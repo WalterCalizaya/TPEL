@@ -16,7 +16,7 @@ use Mail;
 
 use App\User;
 use App\Models\Configuracion;
-use App\Models\Evento;
+use App\Models\Ciclo;
 use App\Models\Inscripcion;
 use App\Models\DetalleInscripcion;
 use App\Models\Banco;
@@ -46,20 +46,20 @@ class CotizacionesController extends Controller
 
     public function listaCotizaciones()
     {
-        $cotizaciones=Inscripcion::where('usuario_id',Auth::user()->id)->with('detalles')->orderBy('anio','desc')->orderBy('numero','desc')->get();
+        $recibos=Inscripcion::where('usuario_id',Auth::user()->id)->with('detalles')->orderBy('anio','desc')->orderBy('numero','desc')->get();
         return view('usuario.cotizaciones.index')
-            ->with('cotizaciones',$cotizaciones);
+            ->with('recibos',$recibos);
     }
 
     public function verCotizacion($id)
     {
         $configuracion=Configuracion::find(1);
-        $cotizacion=Inscripcion::where('id',$id)->with('detalles')->first();
+        $recibo=Inscripcion::where('id',$id)->with('detalles')->first();
 
-        if ($cotizacion && $cotizacion->usuario_id==Auth::user()->id) {
+        if ($recibo && $recibo->usuario_id==Auth::user()->id) {
             return view('usuario.cotizaciones.ver')
                 ->with('configuracion',$configuracion)
-                ->with('cotizacion',$cotizacion);
+                ->with('recibo',$recibo);
         }
         else {
             return redirect('/admin/usuario/sin-permiso');
@@ -68,8 +68,8 @@ class CotizacionesController extends Controller
 
     public function enviarVoucher()
     {
-        $bancos=Banco::where('estado',1)->where('id','!=',1)->get();
-        $elegirBanco=Banco::where('estado',1)->where('id','!=',1)->get()->pluck('bank_and_acc','id');
+        $bancos=Banco::where('estado',1)->where('id','!=',1)->where('id','!=',2)->get();
+        $elegirBanco=Banco::where('estado',1)->where('id','!=',1)->where('id','!=',2)->get()->pluck('bank_and_acc','id');
         $elegirCotizacion=Inscripcion::where('usuario_id',Auth::user()->id)->where('estado',1)->orderBy('anio','desc')->orderBy('numero','desc')->get()->pluck('year_and_number','id');
 
         return view('usuario.cotizaciones.voucher')
@@ -120,11 +120,11 @@ class CotizacionesController extends Controller
             $cotizacion->save();
 
             Mail::send('usuario.email.voucher_recibido', $data, function($message) use ($data){
-                $message->to($data['email'],$data['nombres'])->subject('Tu voucher fue enviado correctamente - Tacnatel');
+                $message->to($data['email'],$data['nombres'])->subject('Tu voucher fue enviado correctamente - Tu Profe en Línea');
             });
 
             alert()->success('¡Yeah!','Tu voucher fue enviado con éxito')->autoClose(5000)->showCloseButton();
-            return redirect('/admin/usuario/cotizaciones');
+            return redirect('/admin/usuario/recibos');
         }
         else {
             return redirect('/admin/usuario/sin-permiso');
@@ -134,7 +134,7 @@ class CotizacionesController extends Controller
 
     public function mostrarMediosdePago()
     {
-        $bancos=Banco::where('estado',1)->where('id','!=',1)->get();
+        $bancos=Banco::where('estado',1)->where('id','!=',1)->where('id','!=',2)->get();
         return view('usuario.cotizaciones.medios-de-pago')
             ->with('bancos',$bancos);
     }

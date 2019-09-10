@@ -25,7 +25,7 @@ Carbon::setLocale('es');
             <div class="card-block">
 
                 @if (count($elegirCotizacion)>0)
-                <form action="{{ url('/admin/usuario/enviar-voucher') }}" method="post" onsubmit="return checkForm(this);" enctype="multipart/form-data">
+                <form action="{{ url('/admin/usuario/enviar-voucher') }}" method="post" enctype="multipart/form-data">
                     @csrf
 
                     <div class="col-sm-10 offset-sm-1">
@@ -46,10 +46,10 @@ Carbon::setLocale('es');
 
                         <div class="form-group {{ $errors->has('cotizacion') ? ' has-danger' : '' }} row">
                             <label class="col-md-3 col-form-label" for="cotizacion">
-                                Seleccionar cotización
+                                Seleccionar recibo
                             </label>
                             <div class="col-md-9">
-                                {!! Form::select('cotizacion',$elegirCotizacion,old('cotizacion'),["class"=>"cotizacion form-control fill ",'placeholder' => 'Seleccione la cotización',"required"=>"","id"=>"cotizacion"]) !!}
+                                {!! Form::select('cotizacion',$elegirCotizacion,old('cotizacion'),["class"=>"cotizacion form-control fill ",'placeholder' => 'Seleccione el recibo',"required"=>"","id"=>"cotizacion"]) !!}
                                 @if ($errors->has('cotizacion'))
                                     <div class="col-form-label">
                                         {{ $errors->first('cotizacion') }}
@@ -84,26 +84,6 @@ Carbon::setLocale('es');
                             @endif
                         </div>
 
-                        <div class="alert alert-secondary background-secondary m-t-10" role="alert">
-                            <h4 class="sub-title">Políticas</h4>
-                            <ul>
-                                <li>El evento puede ser postergado faltando 10 días como máximo para iniciar el curso, en caso falten cubrir los cupos disponibles.</li>
-                                <li>Si Usted no puede asistir en la nueva fecha, entonces puede reservar su cupo para el próximo curso o solicitar la devolución de su dinero.</li>
-                                <li>La devolución de dinero no incluye comisiones bancarias.</li>
-                                <li>Plazo de reembolso: 15 días hábiles.</li>
-                                <li><strong>No hay devolución una vez iniciado el curso.</strong></li>
-                            </ul>
-                        </div>
-
-                        <div class="checkbox-fade fade-in-primary d-block">
-                            <label>
-                                <input type="checkbox" name="terms">
-                                <span class="cr">
-                                    <i class="cr-icon icofont icofont-ui-check txt-primary"></i>
-                                </span>
-                                <span style="font-weight: 700;">Estoy de acuerdo con las políticas</span>
-                            </label>
-                        </div>
                     </div>
 
                     <div class="col-sm-10 offset-sm-1">
@@ -122,7 +102,7 @@ Carbon::setLocale('es');
                         El formulario de envío de comprobantes de pago se habilita cuando tengas al menos una cotización por pagar
                     </div>
                     <p>
-                        Te invitamos a participar en alguno de nuestros <a href="{{ url('/admin/usuario/pre-inscripcion') }}">próximos eventos</a>.
+                        Te invitamos a adquirir alguno de nuestros <a href="{{ url('/admin/usuario/inscripcion') }}">planes</a>.
                     </p>
                 @endif
 
@@ -133,24 +113,4 @@ Carbon::setLocale('es');
         @include('usuario.include.medios-de-pago')
     @endif
 </div>
-@endsection
-
-@section('js')
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.28/dist/sweetalert2.all.min.js"></script>
-<script>
-    function checkForm(form){
-        if(!form.terms.checked) {
-            swal({
-                title: 'Es necesario que aceptes las políticas antes de enviar tu voucher.',
-                type:  'error',
-                button: 'Cerrar',
-                timer: '15000',
-                backdrop: 'rgba(248, 215, 218, 0.45)'
-            });
-          form.terms.focus();
-          return false;
-        }
-        return true;
-    }
-</script>
 @endsection

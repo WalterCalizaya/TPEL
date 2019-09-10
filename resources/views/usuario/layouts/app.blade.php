@@ -10,9 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<title>@yield('title') | Panel de usuario - Tacnatel</title>
-	<meta name="description" content="@yield('description','Panel de usuario de Tacnatel')" />
-	<meta name="author" content="Tacnatel" />
+	<title>@yield('title') | Panel de usuario - Tu Profe en Línea</title>
+	<meta name="description" content="@yield('description','Panel de usuario de Tu Profe en Línea')" />
+	<meta name="author" content="Tu Profe en Línea" />
 
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 

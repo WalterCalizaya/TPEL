@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title>Tu voucher fue enviado correctamente - Tacnatel</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <title>Tu voucher fue enviado correctamente - Tu Profe en Línea</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
     <!-- Web Font / @font-face : BEGIN -->
     <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
@@ -261,7 +261,7 @@
                 <!-- Email Header : BEGIN -->
                 <tr>
                     <td style="padding: 20px 0; text-align: center">
-                        <img src="{{ url('/resources/admin/assets/images/logo.png') }}" width="175" alt="Tacnatel" border="0" style="height: auto; background: #004A99; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #ffffff;">
+                        <img src="{{ url('/assets/img/logo-light.png') }}" width="175" alt="TuProfeEnLinea" border="0" style="height: auto; background: #004A99; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #ffffff;">
                     </td>
                 </tr>
                 <!-- Email Header : END -->
@@ -304,7 +304,7 @@
                                     <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 22px; color: #333333; font-weight: bold;">¡Hola {{ $nombres }}!</h2>
                                     <p style="margin: 0 0 10px 0;">Hemos recibido tu comprobante de pago, procederemos a realizar la confirmación de pago con la entidad bancaria y te notificaremos el resultado en un plazo máximo de 48 horas.</p>
                                     <p style="margin: 0 0 10px 0;"><strong>Entidad bancaria: </strong>{{ $banco }}</p>
-                                    <p style="margin: 0 0 10px 0;"><strong>Cotización: </strong>{{ $cotizacion }}</p>
+                                    <p style="margin: 0 0 10px 0;"><strong>Recibo: </strong>{{ $cotizacion }}</p>
                                     <p style="margin: 0 0 10px 0;"><strong>Observaciones: </strong>{!! $observaciones!=NULL ? $observaciones : 'Ninguna' !!}</p>
                                 </td>
                             </tr>
@@ -343,7 +343,7 @@
                         <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
                             <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 22px; color: #333333; font-weight: bold;">¿Tiene preguntas?</h2>
                             <p style="margin: 0 0 10px 0;">Puedes <a href="{{ url('/contacto') }}"><strong>contactar con nosotros</strong></a> si tienes alguna duda sobre tu cuenta, estaremos gustosos de ayudarte.</p>
-                            <p style="margin: 0 0 10px 0;">Atentamente,<br /><strong>El equipo de Tacnatel</strong></p>
+                            <p style="margin: 0 0 10px 0;">Atentamente,<br /><strong>El equipo de Tu Profe en Línea.</strong></p>
                         </td>
                     </tr>
                 </table>
@@ -366,7 +366,7 @@
         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 680px;">
             <tr>
                 <td style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #888888;">
-                    &copy; Tacnatel.pe<br><span class="unstyle-auto-detected-links">{{ $configuracion->direccion }}<br>{{ $configuracion->telefono }}</span>
+                    &copy; tuprofeenlinea.com<br><span class="unstyle-auto-detected-links">{{ $configuracion->direccion }}<br>{{ $configuracion->telefono }}</span>
                 </td>
             </tr>
         </table>

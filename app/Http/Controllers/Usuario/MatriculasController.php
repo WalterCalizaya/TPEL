@@ -16,7 +16,7 @@ use Mail;
 
 use App\User;
 use App\Models\Configuracion;
-use App\Models\Evento;
+use App\Models\Ciclo;
 use App\Models\Inscripcion;
 use App\Models\DetalleInscripcion;
 use App\Models\Banco;

@@ -14,7 +14,7 @@ class DetalleInscripcion extends Model
         return $this->belongsTo('App\Models\Inscripcion','inscripcion_id');
     }
 
-    public function evento(){
-        return $this->belongsTo('App\Models\Evento','evento_id');
+    public function ciclo(){
+        return $this->belongsTo('App\Models\Ciclo','ciclo_id');
     }
 }

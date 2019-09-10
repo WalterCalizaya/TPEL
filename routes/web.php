@@ -24,6 +24,10 @@ Route::get('/registro/verificar/{code}','Auth\RegisterController@verificar');
 
 
 
+
+
+
+
 Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->group(function(){
         Route::get('/sin-permiso', function (){
@@ -75,11 +79,10 @@ Route::middleware(['auth'])->group(function () {
                 Route::get('/sin-permiso', function (){
                     return view('usuario.errors.permiso');
                 });
-                Route::get('/proximos-eventos','Usuario\UsuarioController@proximosEventos');
-                Route::get('/pre-inscripcion','Usuario\UsuarioController@formPreinscripcion');
-                Route::post('/pre-inscripcion','Usuario\UsuarioController@realizarPreinscripcion');
-                Route::get('/cotizaciones','Usuario\CotizacionesController@listaCotizaciones');
-                Route::get('/ver-cotizacion/{id}','Usuario\CotizacionesController@verCotizacion');
+                Route::get('/inscripcion','Usuario\UsuarioController@formPreinscripcion');
+                Route::post('/inscripcion','Usuario\UsuarioController@realizarPreinscripcion');
+                Route::get('/recibos','Usuario\CotizacionesController@listaCotizaciones');
+                Route::get('/ver-recibo/{id}','Usuario\CotizacionesController@verCotizacion');
                 Route::get('/enviar-voucher','Usuario\CotizacionesController@enviarVoucher');
                 Route::post('/enviar-voucher','Usuario\CotizacionesController@procesarVoucher');
                 Route::get('/medios-de-pago','Usuario\CotizacionesController@mostrarMediosdePago');
@@ -98,8 +101,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
-// Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
-// Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/', 'Front\FrontController@index');
 Route::get('/404', 'Front\FrontController@error404');

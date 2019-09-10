@@ -26,7 +26,7 @@ function concatenar($numero){
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Cotización {{ $cotizacion->anio }}-{{ concatenar($cotizacion->numero) }} - Tacnatel</title>
+    <title>Recibo {{ $recibo->anio }}-{{ concatenar($recibo->numero) }} - Tu Profe en Línea</title>
     <style>
         /* reset */
         {
@@ -71,7 +71,7 @@ function concatenar($numero){
         header { margin: 0 0 2em; }
         header:after { clear: both; content: ""; display: table; }
 
-        header h1 { letter-spacing: 0.5; background: #000; border-radius: 0.25em; color: #FFF; margin: 0 0 1em; padding: 0.5em 0; }
+        header h1 { letter-spacing: 0.5; background: #000; border-radius: 0.25em; color: #FFF; margin: 0 0 1em; padding: 0.5em; }
         header address { float: right; font-size: 75%; font-style: normal; line-height: 1.25; margin: 0 1em 1em 0; }
         header address p { margin: 0 0 0.25em; }
         header span, header img { display: block; float: left; }
@@ -154,24 +154,24 @@ function concatenar($numero){
 
 </head>
 <body>
-    <a class="no-print back-list" href="{{ url('/admin/usuario/cotizaciones') }}"><< Volver al listado de cotizaciones</a>
+    <a class="no-print back-list" href="{{ url('/admin/usuario/recibos') }}"><< Volver al listado de recibos</a>
     <header>
         <span><img alt="Tacnatel" src="{{ url($configuracion->logo) }}"></span>
         <address>
-            <h1>Cotización: {{ $cotizacion->anio }}-{{ concatenar($cotizacion->numero) }}</h1>
+            <h1>Recibo: {{ $recibo->anio }}-{{ concatenar($recibo->numero) }}</h1>
             @if ($configuracion->razon_social)
             <h3>{{ $configuracion->razon_social }}</h3>
             @endif
             @if ($configuracion->ruc)
             <p>R.U.C. {{ $configuracion->ruc }}</p>
             @endif
-            <p>{{ $configuracion->direccion }}</p>
+            {{-- <p>{{ $configuracion->direccion }}</p> --}}
         </address>
     </header>
     <article>
-        @switch($cotizacion->estado)
+        @switch($recibo->estado)
             @case(0)
-                <h2 class="status status_danger">Cotización no válida</h2>
+                <h2 class="status status_danger">Recibo no válido</h2>
                 @break
 
             @case(1)
@@ -209,16 +209,16 @@ function concatenar($numero){
         <table class="meta">
             <tr>
                 <th><span>Nro.</span></th>
-                <td><span>{{ $cotizacion->anio }}-{{ concatenar($cotizacion->numero) }}</span></td>
+                <td><span>{{ $recibo->anio }}-{{ concatenar($recibo->numero) }}</span></td>
             </tr>
             <tr>
                 <th><span>Fecha</span></th>
-                <td><span>{{ Carbon::parse($cotizacion->fecha)->format('d \d\e M, Y') }}</span></td>
+                <td><span>{{ Carbon::parse($recibo->fecha)->format('d \d\e M, Y') }}</span></td>
             </tr>
 
             <tr>
                 <th><span>Total</span></th>
-                <td><span>{{ $cotizacion->moneda }} {{ $cotizacion->subtotal - $cotizacion->descuento }}</span></td>
+                <td><span>{{ $recibo->moneda }} {{ $recibo->subtotal - $recibo->descuento }}</span></td>
 
 
             </tr>
@@ -228,16 +228,16 @@ function concatenar($numero){
                 <tr class="tex">
                     <th><span>Tipo</span></th>
                     <th colspan="2"><span>Descripción</span></th>
-                    <th><span>Fecha</span></th>
+                    <th><span>Inicio del ciclo</span></th>
                     <th><span>Precio</span></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($cotizacion->detalles as $detalle)
+                @foreach ($recibo->detalles as $detalle)
                 <tr>
                     <td><span>{{ $detalle->tipo }}</span></td>
-                    <td colspan="2"><span>{{ $detalle->evento->titulo }}</span></td>
-                    <td style="text-align: center; font-size: 10px;"><span>{{ Carbon::parse($detalle->evento->inicio)->format('d \d\e M, Y') }}</span></td>
+                    <td colspan="2"><span>{{ $detalle->ciclo->titulo }}</span></td>
+                    <td style="text-align: center; font-size: 10px;"><span>{{ Carbon::parse($detalle->ciclo->inicio)->format('d \d\e M, Y') }}</span></td>
                     <td><span>{{ $detalle->moneda }} </span><span>{{ $detalle->precio_unitario }}</span></td>
                 </tr>
                 @endforeach
@@ -246,23 +246,23 @@ function concatenar($numero){
         <table class="balance">
             <tr>
                 <th><span>Subtotal</span></th>
-                <td><span>{{ $cotizacion->moneda }} </span><span>{{ $cotizacion->subtotal }}</span></td>
+                <td><span>{{ $recibo->moneda }} </span><span>{{ $recibo->subtotal }}</span></td>
             </tr>
             <tr>
                 <th><span>Descuento</span></th>
-                <td><span>{{ $cotizacion->moneda }} </span><span>{{ $cotizacion->descuento }}</span></td>
+                <td><span>{{ $recibo->moneda }} </span><span>{{ $recibo->descuento }}</span></td>
             </tr>
             <tr>
                 <th><span>Total</span></th>
-                <td><span>{{ $cotizacion->moneda }} </span><span> {{ $cotizacion->subtotal - $cotizacion->descuento }}</span></td>
+                <td><span>{{ $recibo->moneda }} </span><span> {{ $recibo->subtotal - $recibo->descuento }}</span></td>
             </tr>
         </table>
     </article>
-    @if ($cotizacion->notas_cotizacion)
+    @if ($recibo->notas_cotizacion)
     <aside>
-        <h1><span>Notas</span></h1>
+    	<h1><span>Notas</span></h1>
         <div>
-            {!! $cotizacion->notas_cotizacion !!}
+            {!! $recibo->notas_cotizacion !!}
         </div>
     </aside>
     @endif

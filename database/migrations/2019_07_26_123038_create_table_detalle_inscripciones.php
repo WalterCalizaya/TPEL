@@ -16,7 +16,7 @@ class CreateTableDetalleInscripciones extends Migration
         Schema::create('detalle_inscripciones', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('inscripcion_id')->unsigned();
-            $table->integer('evento_id')->unsigned();
+            $table->integer('ciclo_id')->unsigned();
             $table->integer('cantidad')->unsigned()->default(1);
             $table->string('moneda')->default('S/.');
             $table->integer('precio_unitario')->unsigned()->nullable();
@@ -26,7 +26,7 @@ class CreateTableDetalleInscripciones extends Migration
 
         Schema::table('detalle_inscripciones', function($table) {
             $table->foreign('inscripcion_id')->references('id')->on('inscripciones');
-            $table->foreign('evento_id')->references('id')->on('eventos');
+            $table->foreign('ciclo_id')->references('id')->on('ciclos');
         });
     }
 

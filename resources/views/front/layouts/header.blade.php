@@ -77,6 +77,9 @@
                         </ul>
                     </li>
                     <li>
+                        <a href="{{ url('/en-vivo') }}">En vivo <i class="fas fa-circle" style="color: red;"></i></a>
+                    </li>
+                    <li>
                         <a href="{{ url('/contacto') }}">Contacto</a>
                     </li>
                 </ul>

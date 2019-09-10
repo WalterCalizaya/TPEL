@@ -49,57 +49,27 @@ function concatenar($numero){
                         <thead>
                             <tr>
                                 <th>Pagado en</th>
-                                <th>Evento</th>
-                                <th class="text-center">Lugar</th>
-                                <th class="text-center">Fecha</th>
+                                <th>Ciclo</th>
+                                <th class="text-center">Fecha de Inicio</th>
                                 {{-- <th class="text-center">Certificado</th> --}}
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($matriculas as $matricula)
                                 @foreach ($matricula->detalles as $curso)
-
-                                    @php
-                                    switch ($curso->evento->tipo_evento) {
-                                        case '1':
-                                        $link = '/certificaciones/'.$curso->evento->certificacion->tipocertificacion->slug.'/'.$curso->evento->slug;
-                                        break;
-                                        case '2':
-                                        $link = '/talleres/'.$curso->evento->slug;
-                                        break;
-                                        case '3':
-                                        $link = '/seminarios/'.$curso->evento->slug;
-                                        break;
-                                        case '4':
-                                        $link = '/webinar/'.$curso->evento->slug;
-                                        break;
-
-                                        default:
-                                        $link = '#';
-                                        break;
-                                    }
-                                    @endphp
-
                                     <tr>
                                         <td>
-                                            Cot. {{ $matricula->anio }}-{{ concatenar($matricula->numero) }}
-                                            <a href="{{ url('/admin/usuario/ver-cotizacion/'.$matricula->id) }}">
-                                                <i class="icofont-ui-file f-15 m-r-15 text-c-blue" data-toggle="tooltip" data-placement="left" data-original-title="Ver cotización"></i>
+                                            Recibo. {{ $matricula->anio }}-{{ concatenar($matricula->numero) }}
+                                            <a href="{{ url('/admin/usuario/ver-recibo/'.$matricula->id) }}">
+                                                <i class="icofont-ui-file f-15 m-r-15 text-c-blue" data-toggle="tooltip" data-placement="left" data-original-title="Ver recibo"></i>
                                             </a>
                                         </td>
                                         <td>
-                                            {{ $curso->evento->titulo }} <a href="{{ $link }}"><i class="icon feather icon-link-2 text-c-blue f-w-600 f-16 m-r-15" data-toggle="tooltip" data-placement="left" data-original-title="Ver en Frontpage"></i></a>
-                                        </td>
-                                        <td class="text-center">
-                                            {{ $curso->evento->distrito->nombre }}, {{ $curso->evento->distrito->provincia->nombre }}, {{ $curso->evento->distrito->provincia->region->nombre }}
+                                            {{ $curso->ciclo->titulo }} {{-- <a href="{{ $link }}"><i class="icon feather icon-link-2 text-c-blue f-w-600 f-16 m-r-15" data-toggle="tooltip" data-placement="left" data-original-title="Ver en Frontpage"></i></a> --}}
                                         </td>
                                         <td class="text-center">
                                             <i class="feather icon-calendar text-c-blue m-r-5"></i>
-                                            @if ($curso->evento->inicio==$curso->evento->fin)
-                                            {{ Carbon::parse($curso->evento->inicio)->format('d \d\e M') }} ({{ Carbon::parse($curso->evento->inicio)->diffForHumans(null, false, false, 1) }})
-                                            @else
-                                            {{ Carbon::parse($curso->evento->inicio)->format('d \d\e M') }} al {{ Carbon::parse($curso->evento->fin)->format('d \d\e M, Y') }} ({{ Carbon::parse($curso->evento->inicio)->diffForHumans(null, false, false, 1) }})
-                                            @endif
+                                            {{ Carbon::parse($curso->ciclo->inicio)->format('d \d\e M') }} ({{ $curso->ciclo->duracion }})
                                         </td>
                                         {{-- <td class="text-center">
                                             <a href="#">
@@ -114,10 +84,10 @@ function concatenar($numero){
                 </div>
                 @else
                     <div class="alert alert-danger background-danger">
-                        Todavía no estás matriculado en ningún evento 😟
+                        Todavía no estás matriculado en ningún ciclo 😟
                     </div>
                     <p>
-                        Te invitamos a participar en alguno de nuestros <a href="{{ url('/admin/usuario/pre-inscripcion') }}">próximos eventos</a>.
+                        Te invitamos a inscribirte en alguno de nuestros <a href="{{ url('/admin/usuario/inscripcion') }}">ciclos disponibles</a>.
                     </p>
                 @endif
 

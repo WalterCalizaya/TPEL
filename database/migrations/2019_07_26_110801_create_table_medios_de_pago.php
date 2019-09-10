@@ -23,6 +23,7 @@ class CreateTableMediosDePago extends Migration
             $table->string('logo');
             $table->string('ancho_img');
             $table->integer('estado')->default(1);//1 valido, 2 descontinuado
+            $table->string('comision')->nullable();
             $table->timestamps();
         });
     }

@@ -94,7 +94,7 @@ class PerfilController extends Controller
     {
         $ant=auth()->user();
         $user = $ant->replicate();
-        
+
         $explo=explode('@', $ant->email);
         $email=$explo[0].str_random(10).'@'.str_random(5).'.com';
         $ant->email=$email;
