@@ -1,17 +1,12 @@
 /* ----------------------------------
 
-Template Name: Educates - Education and LMS Template
-Author: validtheme
-Description:
-Version: 1.2
-
 Main Font    : Poppins
 Main Color   : #ffb606
 
 -------------------------------------
 
 Table of contents
-        
+
     01. Template default css
     02. Navbar
         - Navbar Left
@@ -154,7 +149,7 @@ pre {
   line-height: 1.42857143;
 }
 
-input:focus, textarea:focus, 
+input:focus, textarea:focus,
  select:focus {
   outline: none;
   box-shadow: inherit;
@@ -193,10 +188,10 @@ b, strong {
   background-image: inherit !important;
 }
 
-.btn.focus, 
- .btn:active:focus, 
- .btn:active:hover, 
- .btn:focus, 
+.btn.focus,
+ .btn:active:focus,
+ .btn:active:hover,
+ .btn:focus,
  .btn:hover {
   outline: 0;
 }
@@ -257,13 +252,13 @@ input {
   float: right;
 }
 
-.text-light h1, 
- .text-light h2, 
- .text-light h3, 
- .text-light h4, 
- .text-light h5, 
- .text-light h6, 
- .text-light p, 
+.text-light h1,
+ .text-light h2,
+ .text-light h3,
+ .text-light h4,
+ .text-light h5,
+ .text-light h6,
+ .text-light p,
  .text-light a {
   color: #ffffff;
 }
@@ -419,7 +414,7 @@ input {
   border: 2px solid #ffffff;
 }
 
-.btn.btn-sm-pro.btn-border-light:hover, 
+.btn.btn-sm-pro.btn-border-light:hover,
  .btn.btn-sm-pro.btn-border-light:focus {
   background-color: #ffffff;
   color: #002147;
@@ -460,14 +455,14 @@ input {
   color: #002147;
 }
 
-.btn.btn-light:hover, 
+.btn.btn-light:hover,
  .btn.btn-light:focus {
   background: transparent none repeat scroll 0 0;
   border: 2px solid #ffffff;
   color: #ffffff;
 }
 
-.btn.btn-light.effect:hover, 
+.btn.btn-light.effect:hover,
  .btn.btn-light.effect:focus {
   background-color: #ffb606;
   color: #ffffff !important;
@@ -486,7 +481,7 @@ input {
   color: #002147 !important;
 }
 
-.btn-dark:hover, 
+.btn-dark:hover,
  .btn-dark:focus {
   color: #002147 !important;
   background: transparent;
@@ -515,14 +510,14 @@ input {
   border: 2px solid #ffb606;
 }
 
-.btn-theme.effect:hover, 
+.btn-theme.effect:hover,
  .btn-theme.effect:focus {
   background: #ffd134 none repeat scroll 0 0;
   border: 2px solid #ffd134;
   color: #ffffff !important;
 }
 
-.button-theme:hover, 
+.button-theme:hover,
  .button-theme:focus {
   background: #ffd134 none repeat scroll 0 0;
   color: #ffffff !important;
@@ -685,8 +680,8 @@ nav.bootsnav.navbar-default.info-topbar.active-full ul li a {
   padding: 35px 20px;
 }
 
-.attr-nav > a.btn-theme.effect:hover, 
-.attr-nav > a.btn-theme.effect, 
+.attr-nav > a.btn-theme.effect:hover,
+.attr-nav > a.btn-theme.effect,
 .attr-nav > a.btn-theme.effect:focus {
   background: #ffb606 none repeat scroll 0 0;
   border: 2px solid #ffb606;
@@ -735,8 +730,8 @@ nav.navbar.bootsnav.navbar-transparent.pad-top {
   margin-top: 63px;
 }
 
-/* ============================================================== 
-     # Topbar 
+/* ==============================================================
+     # Topbar
 =================================================================== */
 .top-bar-area {
   padding: 10px 0;
@@ -929,8 +924,8 @@ nav.navbar.bootsnav.navbar-transparent.pad-top {
 }
 
 
-/* ============================================================== 
-     # Bradcrumb 
+/* ==============================================================
+     # Bradcrumb
 =================================================================== */
 .breadcrumb-area {
   padding: 140px 0 150px;
@@ -983,7 +978,7 @@ nav.navbar.bootsnav.navbar-transparent.pad-top {
   top: -1px;
 }
 
-.breadcrumb-area .breadcrumb a, 
+.breadcrumb-area .breadcrumb a,
  .breadcrumb-area .breadcrumb li {
   font-weight: 600;
   text-transform: uppercase;
@@ -995,10 +990,10 @@ nav.navbar.bootsnav.navbar-transparent.pad-top {
 }
 
 
-/* ============================================================== 
-     # Banner 
+/* ==============================================================
+     # Banner
 =================================================================== */
-body, .banner-area, 
+body, .banner-area,
  .banner-area div {
   height: 100%;
 }
@@ -1014,7 +1009,7 @@ body, .banner-area,
   width: 100%;
 }
 
-.banner-area .box-cell, 
+.banner-area .box-cell,
  .banner-area .box-cell div {
   height: auto;
 }
@@ -1099,29 +1094,29 @@ body, .banner-area,
 }
 
 /* Animation delays */
-.banner-area .item h1:first-child, 
- .banner-area .item h2:first-child, 
- .banner-area .item h3:first-child, 
- .banner-area .item h4:first-child, 
- .banner-area .item h5:first-child, 
+.banner-area .item h1:first-child,
+ .banner-area .item h2:first-child,
+ .banner-area .item h3:first-child,
+ .banner-area .item h4:first-child,
+ .banner-area .item h5:first-child,
  .banner-area .item h6:first-child {
   animation-delay: .5s;
 }
 
-.banner-area .item h1:nth-child(2), 
- .banner-area .item h2:nth-child(2), 
- .banner-area .item h3:nth-child(2), 
- .banner-area .item h4:nth-child(2), 
- .banner-area .item h5:nth-child(2), 
+.banner-area .item h1:nth-child(2),
+ .banner-area .item h2:nth-child(2),
+ .banner-area .item h3:nth-child(2),
+ .banner-area .item h4:nth-child(2),
+ .banner-area .item h5:nth-child(2),
  .banner-area .item h6:nth-child(2) {
   animation-delay: .6s;
 }
 
-.carousel-caption h1:nth-child(3), 
- .carousel-caption h2:nth-child(3), 
- .carousel-caption h3:nth-child(3), 
- .carousel-caption h4:nth-child(3), 
- .carousel-caption h5:nth-child(3), 
+.carousel-caption h1:nth-child(3),
+ .carousel-caption h2:nth-child(3),
+ .carousel-caption h3:nth-child(3),
+ .carousel-caption h4:nth-child(3),
+ .carousel-caption h5:nth-child(3),
  .carousel-caption h6:nth-child(3) {
   animation-delay: .9s;
 }
@@ -1130,15 +1125,15 @@ body, .banner-area,
   animation-delay: .5s;
 }
 
-.banner-area .item a, 
+.banner-area .item a,
  .banner-area .item button {
   animation-delay: .7s;
   margin-right: 3px;
 }
 
-.banner-area.text-center .item a, 
+.banner-area.text-center .item a,
 .banner-area.text-center .item button,
-.banner-area .text-center .item a, 
+.banner-area .text-center .item a,
 .banner-area .text-center .item button {
   margin-right: 3px;
   margin-left: 3px;
@@ -1151,21 +1146,21 @@ body, .banner-area,
   transition-property: opacity;
 }
 
-.carousel-fade .carousel-inner .item, 
- .carousel-fade .carousel-inner .active.left, 
+.carousel-fade .carousel-inner .item,
+ .carousel-fade .carousel-inner .active.left,
  .carousel-fade .carousel-inner .active.right {
   opacity: 0;
 }
 
-.carousel-fade .carousel-inner .active, 
- .carousel-fade .carousel-inner .next.left, 
+.carousel-fade .carousel-inner .active,
+ .carousel-fade .carousel-inner .next.left,
  .carousel-fade .carousel-inner .prev.right {
   opacity: 1;
 }
 
-.carousel-fade .carousel-inner .next, 
- .carousel-fade .carousel-inner .prev, 
- .carousel-fade .carousel-inner .active.left, 
+.carousel-fade .carousel-inner .next,
+ .carousel-fade .carousel-inner .prev,
+ .carousel-fade .carousel-inner .active.left,
  .carousel-fade .carousel-inner .active.right {
   left: 0;
   -webkit-transform: translate3d(0, 0, 0);
@@ -1335,7 +1330,7 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # About Area
 =================================================================== */
 .about-area .our-features .item {
@@ -1362,7 +1357,7 @@ body, .banner-area,
   border-radius: 5px;
 }
 
-.about-area .our-features .item .icon, 
+.about-area .our-features .item .icon,
 .about-area .our-features .item .info {
   display: table-cell;
   vertical-align: middle;
@@ -1507,7 +1502,7 @@ body, .banner-area,
   width: 20px;
 }
 
-.about-area .info.less-bar h1::before, 
+.about-area .info.less-bar h1::before,
 .about-area .info.less-bar h1::after {
   display: none;
 }
@@ -1562,21 +1557,21 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # Why Chose Us
 =================================================================== */
 .wcs-area .site-heading {
   margin-bottom: 20px;
 }
 
-.wcs-area .thumb, 
+.wcs-area .thumb,
 .wcs-area .content {
   display: table-cell;
   float: none;
   vertical-align: middle;
 }
 
-.wcs-area.content-default .thumb, 
+.wcs-area.content-default .thumb,
 .wcs-area.content-default .content {
   display: inline-block;
   float: left;
@@ -1675,7 +1670,7 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # Pricing
 =================================================================== */
 
@@ -1739,8 +1734,8 @@ body, .banner-area,
   text-transform: capitalize;
 }
 
-.pricing-item li:last-child, 
-.pricing-item li:first-child, 
+.pricing-item li:last-child,
+.pricing-item li:first-child,
 .pricing-item li:nth-child(2) {
   border: medium none;
 }
@@ -1769,8 +1764,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Search Couse 
+/* ==============================================================
+     # Search Couse
 =================================================================== */
 .our-featues-area .search-course {
   margin-bottom: 50px;
@@ -1827,8 +1822,8 @@ body, .banner-area,
 
 
 
-/* ============================================================== 
-     # Featured Courses 
+/* ==============================================================
+     # Featured Courses
 =================================================================== */
 .featured-courses-area .info h2 {
   font-weight: 600;
@@ -1913,7 +1908,7 @@ body, .banner-area,
   margin: 0;
 }
 
-.featured-courses-area .info ul li i, 
+.featured-courses-area .info ul li i,
 .featured-courses-area .info ul li span {
   display: table-cell;
 }
@@ -1934,7 +1929,7 @@ body, .banner-area,
   margin: 0;
 }
 
-.featured-courses-area .featured-courses-carousel .owl-nav .owl-prev, 
+.featured-courses-area .featured-courses-carousel .owl-nav .owl-prev,
 .featured-courses-area .featured-courses-carousel .owl-nav .owl-next {
   background: #ffffff none repeat scroll 0 0;
   -webkit-border-radius: 50%;
@@ -1963,7 +1958,7 @@ body, .banner-area,
   opacity: 0;
 }
 
-.featured-courses-area .featured-courses-carousel:hover .owl-nav .owl-prev, 
+.featured-courses-area .featured-courses-carousel:hover .owl-nav .owl-prev,
 .featured-courses-area .featured-courses-carousel:hover .owl-nav .owl-next {
   opacity: 1;
 }
@@ -1976,7 +1971,7 @@ body, .banner-area,
   right: -70px;
 }
 
-.featured-courses-area .featured-courses-carousel .owl-nav .owl-prev:hover, 
+.featured-courses-area .featured-courses-carousel .owl-nav .owl-prev:hover,
 .featured-courses-area .featured-courses-carousel .owl-nav .owl-next:hover {
   background: #ffffff none repeat scroll 0 0;
   color: #ffb606;
@@ -2080,15 +2075,15 @@ body, .banner-area,
   opacity: 0.5;
 }
 
-.our-featues-area.inc-trending-courses .col-md-6:nth-child(1) .item, 
+.our-featues-area.inc-trending-courses .col-md-6:nth-child(1) .item,
 .our-featues-area.inc-trending-courses .col-md-6:nth-child(2) .item {
   margin-top: 15px;
 }
 
 
 
-/* ============================================================== 
-     # Home Sidebar 
+/* ==============================================================
+     # Home Sidebar
 =================================================================== */
 
 .our-featues-area.inc-trending-courses .col-md-6 .item {
@@ -2195,7 +2190,7 @@ body, .banner-area,
   margin: 0;
 }
 
-.home-sidebar .sidebar-item.trending-courses-box .thumb, 
+.home-sidebar .sidebar-item.trending-courses-box .thumb,
 .home-sidebar .sidebar-item.trending-courses-box .info {
   display: table-cell;
   vertical-align: top;
@@ -2212,7 +2207,7 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # Video Button Play
 =================================================================== */
 .video-area {
@@ -2360,8 +2355,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Popular Courses 
+/* ==============================================================
+     # Popular Courses
 =================================================================== */
 .popular-courses-items .item {
   -moz-box-shadow: 0 0 10px #cccccc;
@@ -2428,7 +2423,7 @@ body, .banner-area,
   text-transform: uppercase;
 }
 
-.popular-courses-items .author-info .thumb, 
+.popular-courses-items .author-info .thumb,
 .popular-courses-items .author-info .others {
   display: table-cell;
   vertical-align: middle;
@@ -2597,7 +2592,7 @@ body, .banner-area,
   margin: 0;
 }
 
-.popular-courses .popular-courses-items .owl-nav .owl-prev, 
+.popular-courses .popular-courses-items .owl-nav .owl-prev,
 .popular-courses .popular-courses-items .owl-nav .owl-next {
   background: #ffffff none repeat scroll 0 0;
   -webkit-border-radius: 50%;
@@ -2626,7 +2621,7 @@ body, .banner-area,
   opacity: 0;
 }
 
-.popular-courses .popular-courses-items:hover .owl-nav .owl-prev, 
+.popular-courses .popular-courses-items:hover .owl-nav .owl-prev,
 .popular-courses .popular-courses-items:hover .owl-nav .owl-next {
   opacity: 1;
 }
@@ -2639,7 +2634,7 @@ body, .banner-area,
   right: -70px;
 }
 
-.popular-courses .popular-courses-items .owl-nav .owl-prev:hover, 
+.popular-courses .popular-courses-items .owl-nav .owl-prev:hover,
 .popular-courses .popular-courses-items .owl-nav .owl-next:hover {
   background: #ffffff none repeat scroll 0 0;
   color: #ffb606;
@@ -2688,7 +2683,7 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # Course Details
 =================================================================== */
 .course-details-area .course-details-info .course-meta .item {
@@ -2715,7 +2710,7 @@ body, .banner-area,
   text-transform: uppercase;
 }
 
-.course-details-area .course-details-info .course-meta .item.author .thumb, 
+.course-details-area .course-details-info .course-meta .item.author .thumb,
 .course-details-area .course-details-info .course-meta .item.author .desc {
   display: table-cell;
   vertical-align: top;
@@ -2897,7 +2892,7 @@ body, .banner-area,
   text-transform: capitalize;
 }
 
-.course-details-area .advisor-list-items .item .thumb, 
+.course-details-area .advisor-list-items .item .thumb,
 .course-details-area .advisor-list-items .item .info {
   display: table-cell;
   vertical-align: top;
@@ -3129,7 +3124,7 @@ body, .banner-area,
   font-weight: 600;
 }
 
-.course-details-area .sidebar .sidebar-item.recent-post .thumb, 
+.course-details-area .sidebar .sidebar-item.recent-post .thumb,
 .course-details-area .sidebar .sidebar-item.recent-post .info {
   display: table-cell;
   vertical-align: top;
@@ -3183,8 +3178,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Top Category 
+/* ==============================================================
+     # Top Category
 =================================================================== */
 .top-cat-area .top-cat-items.text-center {
   padding-right: 35px;
@@ -3260,13 +3255,13 @@ body, .banner-area,
   -o-transition: all 0.35s ease-in-out;
 }
 
-.top-cat-items .item i, 
+.top-cat-items .item i,
 .top-cat-items .item .info {
   display: table-cell;
   vertical-align: top;
 }
 
-.top-cat-items.text-center .item i, 
+.top-cat-items.text-center .item i,
 .top-cat-items.text-center .item .info {
   display: block;
 }
@@ -3369,8 +3364,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Fun Factor 
+/* ==============================================================
+     # Fun Factor
 =================================================================== */
 .fun-factor-area.default-padding.bottom-less {
   padding-bottom: 40px;
@@ -3427,7 +3422,7 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # Advisor
 =================================================================== */
 
@@ -3697,9 +3692,9 @@ body, .banner-area,
   margin: 0;
 }
 
-.advisor-area .advisor-carousel .owl-nav .owl-prev, 
+.advisor-area .advisor-carousel .owl-nav .owl-prev,
 .advisor-area .advisor-carousel .owl-nav .owl-next,
-.advisor-area .advisor-carousel-solid .owl-nav .owl-prev, 
+.advisor-area .advisor-carousel-solid .owl-nav .owl-prev,
 .advisor-area .advisor-carousel-solid .owl-nav .owl-next {
   background: #ffffff none repeat scroll 0 0;
   -webkit-border-radius: 50%;
@@ -3728,9 +3723,9 @@ body, .banner-area,
   opacity: 0;
 }
 
-.advisor-area .advisor-carousel:hover .owl-nav .owl-prev, 
+.advisor-area .advisor-carousel:hover .owl-nav .owl-prev,
 .advisor-area .advisor-carousel:hover .owl-nav .owl-next,
-.advisor-area .advisor-carousel-solid:hover .owl-nav .owl-prev, 
+.advisor-area .advisor-carousel-solid:hover .owl-nav .owl-prev,
 .advisor-area .advisor-carousel-solid:hover .owl-nav .owl-next {
   opacity: 1;
 }
@@ -3745,9 +3740,9 @@ body, .banner-area,
   right: -70px;
 }
 
-.advisor-area .advisor-carousel .owl-nav .owl-prev:hover, 
+.advisor-area .advisor-carousel .owl-nav .owl-prev:hover,
 .advisor-area .advisor-carousel .owl-nav .owl-next:hover,
-.advisor-area .advisor-carousel-solid .owl-nav .owl-prev:hover, 
+.advisor-area .advisor-carousel-solid .owl-nav .owl-prev:hover,
 .advisor-area .advisor-carousel-solid .owl-nav .owl-next:hover {
   background: #ffffff none repeat scroll 0 0;
   color: #ffb606;
@@ -3760,8 +3755,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Advisor Details 
+/* ==============================================================
+     # Advisor Details
 =================================================================== */
 .adviros-details-area .info.main-content {
   padding-left: 35px;
@@ -3974,8 +3969,8 @@ body, .banner-area,
   margin-bottom: 0;
 }
 
-/* ============================================================== 
-     # Edit Profile 
+/* ==============================================================
+     # Edit Profile
 =================================================================== */
 
 .edit-profile .update-info img {
@@ -4044,17 +4039,17 @@ body, .banner-area,
 
 
 
-/* ============================================================== 
-     # Event 
+/* ==============================================================
+     # Event
 =================================================================== */
-.event-area .event-items .item .thumb, 
+.event-area .event-items .item .thumb,
 .event-area .event-items .item .info {
   display: table-cell;
   float: none;
   vertical-align: middle;
 }
 
-.event-area .event-items .item.vertical .thumb, 
+.event-area .event-items .item.vertical .thumb,
 .event-area .event-items .item.vertical .info {
   display: block;
   float: none;
@@ -4219,7 +4214,7 @@ body, .banner-area,
   margin: 0;
 }
 
-.event-area .event-items.event-carousel .owl-nav .owl-prev, 
+.event-area .event-items.event-carousel .owl-nav .owl-prev,
 .event-area .event-items.event-carousel .owl-nav .owl-next {
   background: #ffffff none repeat scroll 0 0;
   -webkit-border-radius: 50%;
@@ -4248,7 +4243,7 @@ body, .banner-area,
   width: 45px;
 }
 
-.event-area .event-items.event-carousel:hover .owl-nav .owl-prev, 
+.event-area .event-items.event-carousel:hover .owl-nav .owl-prev,
 .event-area .event-items.event-carousel:hover .owl-nav .owl-next {
   opacity: 1;
 }
@@ -4261,7 +4256,7 @@ body, .banner-area,
   right: -70px;
 }
 
-.event-area .event-items.event-carousel .owl-nav .owl-prev:hover, 
+.event-area .event-items.event-carousel .owl-nav .owl-prev:hover,
 .event-area .event-items.event-carousel .owl-nav .owl-next:hover {
   background: #ffffff none repeat scroll 0 0;
   color: #ffb606;
@@ -4273,8 +4268,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Clients 
+/* ==============================================================
+     # Clients
 =================================================================== */
 .clients-review-carousel .thumb {
   padding-left: 0;
@@ -4340,7 +4335,7 @@ body, .banner-area,
   margin: 0;
 }
 
-.testimonials-area .clients-review-carousel .owl-nav .owl-prev, 
+.testimonials-area .clients-review-carousel .owl-nav .owl-prev,
 .testimonials-area .clients-review-carousel .owl-nav .owl-next {
   background: #ffffff none repeat scroll 0 0;
   -webkit-border-radius: 50%;
@@ -4369,7 +4364,7 @@ body, .banner-area,
   width: 45px;
 }
 
-.testimonials-area .clients-review-carousel:hover .owl-nav .owl-prev, 
+.testimonials-area .clients-review-carousel:hover .owl-nav .owl-prev,
 .testimonials-area .clients-review-carousel:hover .owl-nav .owl-next {
   opacity: 1;
 }
@@ -4382,7 +4377,7 @@ body, .banner-area,
   right: -70px;
 }
 
-.testimonials-area .clients-review-carousel .owl-nav .owl-prev:hover, 
+.testimonials-area .clients-review-carousel .owl-nav .owl-prev:hover,
 .testimonials-area .clients-review-carousel .owl-nav .owl-next:hover {
   background: #ffffff none repeat scroll 0 0;
   color: #ffb606;
@@ -4394,14 +4389,14 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # Registration & Faq
 =================================================================== */
 .faq-area .faq-content .panel-group {
   margin-bottom: 0;
 }
 
-.reg-area .reg-items .reg-form, 
+.reg-area .reg-items .reg-form,
 .reg-area .reg-items .thumb {
   display: table-cell;
   float: none;
@@ -4430,7 +4425,7 @@ body, .banner-area,
   margin-bottom: 0;
 }
 
-.reg-area .reg-form input, 
+.reg-area .reg-form input,
 .reg-area .reg-form select {
   border: 1px solid #e7e7e7;
   border-radius: inherit;
@@ -4466,7 +4461,7 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # Portfolio
 =================================================================== */
 .portfolio-area.default-padding {
@@ -4635,8 +4630,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Faq Accordion 
+/* ==============================================================
+     # Faq Accordion
 =================================================================== */
 .faq-items h2 {
   font-weight: 700;
@@ -4812,8 +4807,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Blog 
+/* ==============================================================
+     # Blog
 =================================================================== */
 .blog-area.left-sidebar .blog-content {
   float: right;
@@ -5085,7 +5080,7 @@ body, .banner-area,
   margin-bottom: 12px;
 }
 
-.blog-area .sidebar .sidebar-item.recent-post .thumb, 
+.blog-area .sidebar .sidebar-item.recent-post .thumb,
 .blog-area .sidebar .sidebar-item.recent-post .info {
   display: table-cell;
   vertical-align: top;
@@ -5486,8 +5481,8 @@ body, .banner-area,
   margin-top: 50px;
 }
 
-.comments-area .comments-title h2, 
-.comments-area .comments-title h3, 
+.comments-area .comments-title h2,
+.comments-area .comments-title h3,
 .comments-area .comments-title h4 {
   border-bottom: 1px solid #e2e2e2;
   font-weight: 700;
@@ -5496,8 +5491,8 @@ body, .banner-area,
   text-transform: uppercase;
 }
 
-.comments-list .commen-item .content h3, 
-.comments-list .commen-item .content h4, 
+.comments-list .commen-item .content h3,
+.comments-list .commen-item .content h4,
 .comments-list .commen-item .content h5 {
   font-size: 14px;
   font-weight: 600;
@@ -5569,8 +5564,8 @@ body, .banner-area,
   margin-bottom: 15px;
 }
 
-.comments-form .title h2, 
-.comments-form .title h3, 
+.comments-form .title h2,
+.comments-form .title h3,
 .comments-form .title h4 {
   border-bottom: 1px solid #e7e7e7;
   font-weight: 700;
@@ -5589,8 +5584,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Clients 
+/* ==============================================================
+     # Clients
 =================================================================== */
 .clients-area .row {
   align-items: center;
@@ -5614,8 +5609,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Subscribe 
+/* ==============================================================
+     # Subscribe
 =================================================================== */
 
 .subscribe-area .content {
@@ -5667,8 +5662,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Join With Us  
+/* ==============================================================
+     # Join With Us
 =================================================================== */
 
 .join-us-area .info h2 {
@@ -5689,8 +5684,8 @@ body, .banner-area,
 }
 
 
-/* ============================================================== 
-     # Contact 
+/* ==============================================================
+     # Contact
 =================================================================== */
 
 .contact-info-area {
@@ -5815,8 +5810,8 @@ form img.loader {
 }
 
 
-/* ============================================================== 
-     # 404 
+/* ==============================================================
+     # 404
 =================================================================== */
 .error-page-area ul li {
   display: inline-block;
@@ -5874,8 +5869,8 @@ form img.loader {
 }
 
 
-/* ============================================================== 
-     # Popup Form 
+/* ==============================================================
+     # Popup Form
 =================================================================== */
 
 form.white-popup-block {
@@ -6010,8 +6005,8 @@ form.white-popup-block .link-bottom a:hover {
 }
 
 
-/* ============================================================== 
-     # Footer 
+/* ==============================================================
+     # Footer
 =================================================================== */
 footer .f-items .item {
   padding-right: 30px;
@@ -6123,7 +6118,7 @@ footer.bg-light .subscribe form button {
   color: #ffffff;
 }
 
-footer .f-item.address i, 
+footer .f-item.address i,
 footer .f-item.address p {
   display: table-cell;
   vertical-align: middle;
@@ -6585,8 +6580,8 @@ footer .footer-bottom.bg-light p {
 }
 
 
-/* ============================================================== 
-     # Preloader 
+/* ==============================================================
+     # Preloader
 =================================================================== */
 .no-js #loader {
   display: none;
@@ -6611,8 +6606,8 @@ footer .footer-bottom.bg-light p {
 }
 
 
-/* ============================================================== 
-     # Demo 
+/* ==============================================================
+     # Demo
 =================================================================== */
 .demo-area .single-item {
   box-shadow: 0 0 10px #cccccc;

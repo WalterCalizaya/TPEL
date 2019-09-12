@@ -40,9 +40,11 @@ function concatenar($numero){
         <div class="card">
             <div class="card-header">
                 <h5>@yield('title')</h5>
+                @if (Auth::user()->tipo==2)
                 <div class="card-header-right">
                     <a href="{{ url('/admin/usuario/inscripcion') }}" class="btn waves-effect waves-light btn-primary btn-outline-primary btn-sm"> <i class="icofont icofont-ui-add" style="color:#4680ff;"></i> Nuevo recibo</a>
                 </div>
+                @endif
             </div>
             <div class="card-block">
 
@@ -99,6 +101,10 @@ function concatenar($numero){
 
                                         @case(4)
                                             <label class="label label-warning">Rechazado</label>
+                                            @break
+
+                                        @case(5)
+                                            <label class="label label-warning">Obsequio</label>
                                             @break
 
                                         @default

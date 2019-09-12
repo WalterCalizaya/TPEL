@@ -36,17 +36,17 @@
                 <li class="pcoded-hasmenu @yield('preinscritos')">
                     <a href="javascript:void(0)" class="waves-effect waves-dark">
                         <span class="pcoded-micon"><i class="feather icon-user-plus"></i></span>
-                        <span class="pcoded-mtext">Calificar pre-inscritos</span>
+                        <span class="pcoded-mtext">Verificar inscritos</span>
                     </a>
                     <ul class="pcoded-submenu">
                         <li class="@yield('por-calificar')">
-                            <a href="{{ url('/admin/lista-preinscritos') }}" class="waves-effect waves-dark">
-                                <span class="pcoded-mtext">Por calificar</span>
+                            <a href="{{ url('/admin/lista-inscritos') }}" class="waves-effect waves-dark">
+                                <span class="pcoded-mtext">Por verificar</span>
                             </a>
                         </li>
                         <li class="@yield('historial-preinscritos')">
-                            <a href="{{ url('/admin/historial-preinscritos') }}" class="waves-effect waves-dark">
-                                <span class="pcoded-mtext">Historial de calificaciones</span>
+                            <a href="{{ url('/admin/historial-inscritos') }}" class="waves-effect waves-dark">
+                                <span class="pcoded-mtext">Historial de verificaciones</span>
                             </a>
                         </li>
                     </ul>

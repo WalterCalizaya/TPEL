@@ -33,6 +33,13 @@ class FrontController extends Controller
         ->with('instructores',$instructores);
     }
 
+    public function envivo()
+    {
+        $configuracion=Configuracion::find(1);
+    	return view('front.envivo.index')
+    		->with('configuracion',$configuracion);
+    }
+
     public function calendario()
     {
         $configuracion=Configuracion::find(1);

@@ -34,7 +34,7 @@ class CreateTableInscripciones extends Migration
             $table->string('ruc')->nullable();
             $table->string('domicilio')->nullable();
 
-            $table->string('estado')->default(1); //0 cancelado, 1 generado (en espera de voucher), 2 voucher enviado, 3 pago aprobado, 4 pago rechazado
+            $table->string('estado')->default(1); //0 cancelado, 1 generado (en espera de voucher), 2 voucher enviado, 3 pago aprobado, 4 pago rechazado, 5 sorteo
             $table->integer('evaluacion')->default(0); //numero de estrellas que le pone el admin
             $table->integer('evaluado_por')->unsigned();
             $table->text('comentario_admin')->nullable();

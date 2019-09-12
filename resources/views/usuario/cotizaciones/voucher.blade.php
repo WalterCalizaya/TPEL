@@ -99,7 +99,7 @@ Carbon::setLocale('es');
                 </form>
                 @else
                     <div class="alert alert-danger background-danger">
-                        El formulario de envío de comprobantes de pago se habilita cuando tengas al menos una cotización por pagar
+                        El formulario de envío de comprobantes de pago se habilita cuando tengas al menos un recibo por pagar
                     </div>
                     <p>
                         Te invitamos a adquirir alguno de nuestros <a href="{{ url('/admin/usuario/inscripcion') }}">planes</a>.

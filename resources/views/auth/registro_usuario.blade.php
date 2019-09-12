@@ -154,7 +154,7 @@ Registrar una nueva cuenta
     <script type="text/javascript">
         $(document).ready(function() {
             if(location.search){
-                var q=location.search.split('=');
+                var q=location.search.split('q=');
                 if(q[1]=='confirmar-correo'){
                     $("#message-user").html('<div class="alert alert-success background-success">'+
                         '<h5>¡Un último paso!</h5>'+
@@ -170,12 +170,12 @@ Registrar una nueva cuenta
                         '</div>'+
                         '<a href="{{ url('/') }}" class="btn btn-theme effect btn-md">Ir a la página principal</a>');
                 }
-                else{
-                    $("#message-user").html('<div class="alert alert-danger background-danger">'+
-                        '<strong>¡Cuidado!</strong> No deberías estar aquí 😡'+
-                        '</div>'+
-                        '<a href="{{ url('/') }}" class="btn btn-theme effect btn-md"><i class="icofont icofont-arrow-left"></i> Ir a la página principal</a>');
-                }
+                // else{
+                //     $("#message-user").html('<div class="alert alert-danger background-danger">'+
+                //         '<strong>¡Cuidado!</strong> No deberías estar aquí 😡'+
+                //         '</div>'+
+                //         '<a href="{{ url('/') }}" class="btn btn-theme effect btn-md"><i class="icofont icofont-arrow-left"></i> Ir a la página principal</a>');
+                // }
                 //window.history.pushState('',document.title,'/login')
                 $("#register-form").addClass('d-none');
                 $("#register-title").addClass('d-none');

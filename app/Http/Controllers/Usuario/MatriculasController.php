@@ -25,7 +25,7 @@ class MatriculasController extends Controller
 {
     public function listaMatriculas()
     {
-        $matriculas=Inscripcion::where('usuario_id',Auth::user()->id)->where('estado','3')->with('detalles')->orderBy('anio','desc')->orderBy('numero','desc')->get();
+        $matriculas=Inscripcion::where('usuario_id',Auth::user()->id)->where('estado','3')->orWhere('estado','5')->with('detalles')->orderBy('anio','desc')->orderBy('numero','desc')->get();
         return view('usuario.matriculas.index')
             ->with('matriculas',$matriculas);
     }

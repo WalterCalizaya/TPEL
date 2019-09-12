@@ -16,7 +16,7 @@ use Auth;
 use App\User;
 use App\Models\Inscripcion;
 use App\Models\DetalleInscripcion;
-use App\Models\Evento;
+use App\Models\Ciclo;
 use App\Models\Banco;
 use App\Models\Configuracion;
 
@@ -90,7 +90,6 @@ class InscripcionesController extends Controller
         $users=User::where('tipo','!=',1)->where('activo',1)->orderBy('id','desc')->get()->pluck('name_and_surname','id');
         $configuracion=Configuracion::find(1);
         $talleres=Evento::where('estado',1)->where('vigencia','!=',0)->where('tipo_evento',2)->orderBy('inicio','asc')->get();
-        $certificaciones=Evento::where('estado',1)->where('vigencia','!=',0)->where('tipo_evento',1)->orderBy('inicio','asc')->get();
         return view('admin.inscripciones.crear')
             ->with('configuracion',$configuracion)
             ->with('users',$users)
@@ -363,7 +362,7 @@ class InscripcionesController extends Controller
         $preinscripcion->save();
 
         alert()->success('¡Yeah!','Operación realizada con éxito')->autoClose(3000)->showCloseButton();
-        return redirect('/admin/lista-preinscritos');
+        return redirect('/admin/lista-inscritos');
     }
 
     public function historialPreinscritos()

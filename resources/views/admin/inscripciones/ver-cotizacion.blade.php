@@ -71,7 +71,7 @@ function concatenar($numero){
         header { margin: 0 0 2em; }
         header:after { clear: both; content: ""; display: table; }
 
-        header h1 { letter-spacing: 0.5; background: #000; border-radius: 0.25em; color: #FFF; margin: 0 0 1em; padding: 0.5em 0; }
+        header h1 { letter-spacing: 0.5; background: #000; border-radius: 0.25em; color: #FFF; margin: 0 0 1em; padding: 0.5em; }
         header address { float: right; font-size: 75%; font-style: normal; line-height: 1.25; margin: 0 1em 1em 0; }
         header address p { margin: 0 0 0.25em; }
         header span, header img { display: block; float: left; }
@@ -154,24 +154,24 @@ function concatenar($numero){
 
 </head>
 <body>
-    <a class="no-print back-list" href="{{ url('/admin/lista-preinscritos') }}"><< Volver al listado de pre-inscritos</a>
+    <a class="no-print back-list" href="{{ url('/admin/lista-inscritos') }}"><< Volver al listado de inscritos</a>
     <header>
         <span><img alt="Tacnatel" src="{{ url($configuracion->logo) }}"></span>
         <address>
-            <h1>Cotización: {{ $cotizacion->anio }}-{{ concatenar($cotizacion->numero) }}</h1>
+            <h1>Recibo: {{ $cotizacion->anio }}-{{ concatenar($cotizacion->numero) }}</h1>
             @if ($configuracion->razon_social)
             <h3>{{ $configuracion->razon_social }}</h3>
             @endif
             @if ($configuracion->ruc)
             <p>R.U.C. {{ $configuracion->ruc }}</p>
             @endif
-            <p>{{ $configuracion->direccion }}</p>
+            {{-- <p>{{ $configuracion->direccion }}</p> --}}
         </address>
     </header>
     <article>
         @switch($cotizacion->estado)
             @case(0)
-                <h2 class="status status_danger">Cotización no válida</h2>
+                <h2 class="status status_danger">Recibo no válido</h2>
                 @break
 
             @case(1)
@@ -188,6 +188,9 @@ function concatenar($numero){
 
             @case(4)
                 <h2 class="status status_danger">Pago rechazado</h2>
+                @break
+            @case(5)
+            	<h2 class="status status_success">Suscripción de regalo</h2>
                 @break
 
             @default
@@ -212,7 +215,7 @@ function concatenar($numero){
                 <td><span>{{ $cotizacion->anio }}-{{ concatenar($cotizacion->numero) }}</span></td>
             </tr>
             <tr>
-                <th><span>Fecha</span></th>
+                <th><span>Fecha de inicio</span></th>
                 <td><span>{{ Carbon::parse($cotizacion->fecha)->format('d \d\e M, Y') }}</span></td>
             </tr>
 
@@ -236,8 +239,8 @@ function concatenar($numero){
                 @foreach ($cotizacion->detalles as $detalle)
                 <tr>
                     <td><span>{{ $detalle->tipo }}</span></td>
-                    <td colspan="2"><span>{{ $detalle->evento->titulo }}</span></td>
-                    <td style="text-align: center; font-size: 10px;"><span>{{ Carbon::parse($detalle->evento->inicio)->format('d \d\e M, Y') }}</span></td>
+                    <td colspan="2"><span>{{ $detalle->ciclo->titulo }}</span></td>
+                    <td style="text-align: center; font-size: 10px;"><span>{{ Carbon::parse($detalle->ciclo->inicio)->format('d \d\e M, Y') }}</span></td>
                     <td><span>{{ $detalle->moneda }} </span><span>{{ $detalle->precio_unitario }}</span></td>
                 </tr>
                 @endforeach

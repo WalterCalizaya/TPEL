@@ -189,6 +189,9 @@ function concatenar($numero){
             @case(4)
                 <h2 class="status status_danger">Pago rechazado</h2>
                 @break
+            @case(5)
+            	<h2 class="status status_success">Suscripción de regalo</h2>
+                @break
 
             @default
                 <h2 class="status status_default no-print">Estado no definido</h2>

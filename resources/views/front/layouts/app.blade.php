@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Examin - Education and LMS Template">
+    <meta name="description" content="Tu Profe en Línea - Cursos de matemáticas dictados en vivo - Preparación Pre Universitaria en Perú">
 
     <title>@yield('titulo') - {{ $configuracion->titulo }}</title>
 

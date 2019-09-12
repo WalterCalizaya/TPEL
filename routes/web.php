@@ -40,7 +40,23 @@ Route::middleware(['auth'])->group(function () {
 			});
             Route::get('/dashboard', 'Admin\HomeController@index');
 
+
+
+
             Route::resource('configuracion-general','Admin\ConfiguracionesController');
+            Route::resource('/lista-inscritos','Admin\InscripcionesController');
+            Route::get('/ver-recibo/{id}','Admin\InscripcionesController@verCotizacion');
+
+
+            Route::get('/calificar-inscrito/{id}','Admin\InscripcionesController@formCalificacion');
+            Route::post('/calificar-inscrito/{id}','Admin\InscripcionesController@calificarPreinscrito');
+
+
+
+
+
+
+
             Route::resource('info-de-local','Admin\InfoAlquileresController');
             Route::resource('instructores','Admin\InstructoresController');
             Route::resource('temarios','Admin\TemariosController');
@@ -54,10 +70,7 @@ Route::middleware(['auth'])->group(function () {
             Route::resource('seminarios','Admin\SeminariosController');
             Route::resource('webinars','Admin\WebinarsController');
 
-            Route::resource('/lista-preinscritos','Admin\InscripcionesController');
-            Route::get('/ver-cotizacion/{id}','Admin\InscripcionesController@verCotizacion');
-            Route::get('/calificar-preinscrito/{id}','Admin\InscripcionesController@formCalificacion');
-            Route::post('/calificar-preinscrito/{id}','Admin\InscripcionesController@calificarPreinscrito');
+
             Route::get('/historial-preinscritos','Admin\InscripcionesController@historialPreinscritos');
 
 
@@ -88,6 +101,7 @@ Route::middleware(['auth'])->group(function () {
                 Route::get('/medios-de-pago','Usuario\CotizacionesController@mostrarMediosdePago');
                 Route::get('/mis-matriculas','Usuario\MatriculasController@listaMatriculas');
 
+
                 Route::get('/perfil/modificar','Usuario\PerfilController@obterperfil');
                 Route::put('/perfil/modificar','Usuario\PerfilController@modificarperfil');
                 Route::get('/perfil/confirmpass','Usuario\PerfilController@confirmpass');
@@ -103,6 +117,9 @@ Route::middleware(['auth'])->group(function () {
 
 
 Route::get('/', 'Front\FrontController@index');
+Route::get('/en-vivo', 'Front\FrontController@envivo');
+
+
 Route::get('/404', 'Front\FrontController@error404');
 Route::get('/calendario', 'Front\FrontController@calendario');
 

@@ -24,6 +24,9 @@ Carbon::setLocale('es');
             <div class="card-block">
                 <p style="font-weight: 600;">Selecciona el plan de tu interés. Al inscribirte se generará un recibo con la información detallada del pago por tu inscripción, <span style="color: red;">tu inscripción no estará completa hasta que realices el pago y envíes el voucher correspondiente</span>.</p>
 
+				@if (Auth::user()->tipo==2)
+				<h4>Ya estás inscrito en el plan FULL</h4>
+                @else
                 <form action="{{ url('/admin/usuario/inscripcion') }}" method="post">
                     @csrf
 
@@ -60,6 +63,7 @@ Carbon::setLocale('es');
                     </div>
 
                 </form>
+                @endif
 
             </div>
         </div>

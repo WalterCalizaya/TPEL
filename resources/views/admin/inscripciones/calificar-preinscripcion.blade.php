@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('title')
-Calificar preinscripción:
+Calificar inscripción:
 @endsection
 
 @section('preinscritos')
@@ -49,7 +49,7 @@ function concatenar($numero){
             </div>
             <div class="card-block">
 
-                <form action="{{ url('/admin/calificar-preinscrito/'.$preinscripcion->id) }}" method="post" name="f">
+                <form action="{{ url('/admin/calificar-inscrito/'.$preinscripcion->id) }}" method="post" name="f">
                     @csrf
                     @method('POST')
 
@@ -110,9 +110,9 @@ function concatenar($numero){
                                 <ol>
                                     @foreach ($preinscripcion->detalles as $detalle)
                                         <li>
-                                            <strong style="font-weight: 700 !important;">{{ $detalle->evento->titulo }}</strong>
+                                            <strong style="font-weight: 700 !important;">{{ $detalle->ciclo->titulo }}</strong>
                                             <br />
-                                            {{ Carbon::parse($detalle->evento->inicio)->format('d \d\e M, Y') }} - {{ $detalle->moneda }} {{ $detalle->precio_unitario }}
+                                            {{ Carbon::parse($detalle->ciclo->inicio)->format('d \d\e M, Y') }} - {{ $detalle->moneda }} {{ $detalle->precio_unitario }}
                                         </li>
                                     @endforeach
                                 </ol>

@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('title')
-Lista de pre-inscritos
+Verificar inscripciones
 @endsection
 
 @section('preinscritos')
@@ -45,7 +45,7 @@ function concatenar($numero){
             <div class="card-header">
                 <h5>@yield('title')</h5>
                 <div class="card-header-right">
-                    <a href="{{ url('/admin/lista-preinscritos/create') }}" class="btn waves-effect waves-light btn-primary btn-outline-primary btn-sm"> <i class="icofont icofont-ui-add" style="color:#4680ff;"></i> Nueva cotización</a>
+                    <a href="{{ url('/admin/lista-inscritos/create') }}" class="btn waves-effect waves-light btn-primary btn-outline-primary btn-sm"> <i class="icofont icofont-ui-add" style="color:#4680ff;"></i> Nueva inscripción</a>
                 </div>
             </div>
             <div class="card-block">
@@ -56,8 +56,8 @@ function concatenar($numero){
                     <table id="tacnatelTable" class="table table-striped table-hover" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Cotización</th>
-                                <th>Eventos</th>
+                                <th>Recibo</th>
+                                <th>Ciclo</th>
                                 <th class="text-center">Monto</th>
                                 <th class="text-center">Estado</th>
                                 <th class="text-center">Acciones</th>
@@ -69,7 +69,7 @@ function concatenar($numero){
                             <tr>
                                 <td>
                                     <div class="d-inline-block">
-                                        <h6>Cotización Nro. {{ $preinscrito->anio }}-{{ concatenar($preinscrito->numero) }}</h6>
+                                        <h6>Recibo Nro. {{ $preinscrito->anio }}-{{ concatenar($preinscrito->numero) }}</h6>
                                         <span><strong>{{ $preinscrito->usuario->nombres }} {{ $preinscrito->usuario->apellidos }}</strong></span>
                                         <p class="text-muted m-b-0">
                                             {{ Carbon::parse($preinscrito->fecha)->format('d \d\e M, Y') }} (Generado {{ Carbon::parse($preinscrito->created_at)->diffForHumans(null, false, false, 1) }})
@@ -79,7 +79,7 @@ function concatenar($numero){
                                 <td>
                                     <ol>
                                         @foreach ($preinscrito->detalles as $detalle)
-                                            <li>{{ $detalle->evento->titulo }}</li>
+                                            <li>{{ $detalle->ciclo->titulo }}</li>
                                         @endforeach
                                     </ol>
                                 </td>
@@ -106,20 +106,24 @@ function concatenar($numero){
                                             <label class="label label-warning">Rechazado</label>
                                             @break
 
+                                        @case(5)
+                                            <label class="label label-warning">Regalado</label>
+                                            @break
+
                                         @default
                                             <label class="label label-default">No definido</label>
                                     @endswitch
                                 </td>
                                 <td class="text-center">
-                                    <a href="{{ url('/admin/ver-cotizacion/'.$preinscrito->id) }}">
-                                        <i class="icofont-ui-file f-20 m-r-15 text-c-blue" data-toggle="tooltip" data-placement="left" data-original-title="Ver cotización"></i>
+                                    <a href="{{ url('/admin/ver-recibo/'.$preinscrito->id) }}">
+                                        <i class="icofont-ui-file f-20 m-r-15 text-c-blue" data-toggle="tooltip" data-placement="left" data-original-title="Ver recibo"></i>
                                     </a>
                                     @if ($preinscrito->estado==1)
-                                    <a href="{{ url('/admin/lista-preinscritos/'.$preinscrito->id.'/edit') }}">
-                                        <i class="icofont-edit f-20 m-r-15 text-c-green" data-toggle="tooltip" data-placement="left" data-original-title="Editar pre-inscripción"></i>
+                                    <a href="{{ url('/admin/lista-inscritos/'.$preinscrito->id.'/edit') }}">
+                                        <i class="icofont-edit f-20 m-r-15 text-c-green" data-toggle="tooltip" data-placement="left" data-original-title="Editar inscripción"></i>
                                     </a>
                                     @endif
-                                    <a href="{{ url('/admin/calificar-preinscrito/'.$preinscrito->id) }}">
+                                    <a href="{{ url('/admin/calificar-inscrito/'.$preinscrito->id) }}">
                                         <i class="icofont-star f-20 text-c-yellow" data-toggle="tooltip" data-placement="left" data-original-title="Calificar"></i>
                                     </a>
                                 </td>

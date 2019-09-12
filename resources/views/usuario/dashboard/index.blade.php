@@ -18,6 +18,27 @@ use Carbon\Carbon;
 setlocale(LC_TIME, 'es_ES.UTF-8');
 Carbon::setLocale('es');
 @endphp
+@if (Auth::user()->tipo==2)
+<div class="row">
+    <div class="col-md-12">
+        <div class="card latest-update-card">
+            <div class="card-header">
+                <h5>¡Recuerda!</h5>
+            </div>
+            <div class="card-block">
+            	<div class="row m-l-50">
+            		<p>Este martes 10 de setiembre a las 07:00 pm es nuestra primera clase en vivo.</p>
+            		<p><strong>Tema:</strong> Sistema de Numeración y Cuatro Operaciones (Práctica de Reforzamiento)</p>
+            	</div>
+            	<div class="row m-l-50">
+            		<p>Ingresa al siguiente link minutos antes de las 07:00 pm</p>
+            	</div>
+            	<a class="m-l-50 btn btn-info btn-round waves-effect waves-light" href="{{ url('/en-vivo') }}">Clic aquí para ingresar a la clase</a>
+            </div>
+        </div>
+    </div>
+</div>
+@else
 <div class="row">
 	<div class="col-md-12">
 		<img src="{{ url('/resources/img/baner-cerebrito.jpg') }}" class="img-fluid" />
@@ -113,4 +134,5 @@ Carbon::setLocale('es');
         </div>
     </div>
 </div>
+@endif
 @endsection

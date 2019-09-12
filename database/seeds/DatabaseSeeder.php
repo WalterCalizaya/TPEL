@@ -23,8 +23,8 @@ class DatabaseSeeder extends Seeder
         $this->call(EventosTableSeeder::class);
         $this->call(MediosDePagoTableSeeder::class);
         $this->call(AlquileresTableSeeder::class);
-        // $this->call(InscripcionesTableSeeder::class);
-        // $this->call(DetalleInscripcionesTableSeeder::class);
         $this->call(CiclosTableSeeder::class);
+        $this->call(InscripcionesTableSeeder::class);
+        $this->call(DetalleInscripcionesTableSeeder::class);
     }
 }
