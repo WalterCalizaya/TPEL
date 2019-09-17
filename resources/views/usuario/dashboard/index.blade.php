@@ -27,8 +27,10 @@ Carbon::setLocale('es');
             </div>
             <div class="card-block">
             	<div class="row m-l-50">
-            		<p>Este martes 10 de setiembre a las 07:00 pm es nuestra primera clase en vivo.</p>
-            		<p><strong>Tema:</strong> Sistema de Numeración y Cuatro Operaciones (Práctica de Reforzamiento)</p>
+            		<p>Este martes 17 de setiembre a las 07:00 pm es nuestra segunda clase en vivo.
+            		<br /><br />
+            		<strong>Tema:</strong> Divisibilidad <br />
+            		Resolución Práctica 03 Aritmética y Álgebra - CEPU Invierno</p>
             	</div>
             	<div class="row m-l-50">
             		<p>Ingresa al siguiente link minutos antes de las 07:00 pm</p>

@@ -21,6 +21,18 @@
                 </li>
             </ul>
 
+            @if (Auth::user()->tipo == 2)
+            <div class="pcoded-navigation-label">Mi plan</div>
+            <ul class="pcoded-item pcoded-left-item">
+
+                <li class="@yield('cepu-invierno')">
+                    <a href="{{ url('/admin/usuario/cepu-invierno') }}" class="waves-effect waves-dark">
+                        <span class="pcoded-micon"><i class="feather icon-book"></i></span>
+                        <span class="pcoded-mtext">CEPU Invierno</span>
+                    </a>
+                </li>
+            @endif
+
             <div class="pcoded-navigation-label">Mis intereses</div>
             <ul class="pcoded-item pcoded-left-item">
 

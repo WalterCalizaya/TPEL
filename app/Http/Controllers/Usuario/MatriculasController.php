@@ -29,4 +29,9 @@ class MatriculasController extends Controller
         return view('usuario.matriculas.index')
             ->with('matriculas',$matriculas);
     }
+
+    public function listaCepu()
+    {
+    	return view('usuario.cepu-invierno.index');
+    }
 }

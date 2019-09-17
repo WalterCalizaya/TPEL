@@ -26,8 +26,8 @@ active
                                         <p data-animation="animated slideInUp">
                                             ¿Tienes un examen de admisión y no tienes tiempo para asistir a una academia presencial? ¡No esperes más, aprende ahora!
                                         </p>
-                                        <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#register-form">Registrarse ahora</a>
-                                        <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="#login-form">Iniciar sesión</a>
+                                        <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="{{ url('/registro-usuario') }}">Registrarse ahora</a>
+                                        <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="{{ url('/login') }}">Iniciar sesión</a>
                                     </div>
                                 </div>
                             </div>
@@ -47,8 +47,8 @@ active
                                         <p data-animation="animated slideInUp">
                                             Nuestras clases virtuales en vivo te permiten tener interacción directa con el profesor con el fin de resolver cualquier duda que tengas, todo desde el lugar donde te encuentres
                                         </p>
-                                        <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#register-form">Registrarse ahora</a>
-                                        <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="#login-form">Iniciar sesión</a>
+                                        <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="{{ url('/registro-usuario') }}">Registrarse ahora</a>
+                                        <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="{{ url('/login') }}">Iniciar sesión</a>
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@ active
                             <li>Sección pizarritas</li>
                             <li><strong>Tutoriales</strong></li>
                             <li class="footer">
-                                <a class="btn circle btn-dark border btn-sm" href="#register-form">Registrarse ahora</a>
+                                <a class="btn circle btn-dark border btn-sm" href="{{ url('/registro-usuario') }}">Registrarse ahora</a>
                             </li>
                         </ul>
                     </div>
@@ -102,7 +102,7 @@ active
                             <li><strong>Acceso a clases en vivo</strong></li>
                             <li>Descarga de material en PDF</li>
                             <li class="footer">
-                                <a class="btn circle btn-dark border btn-sm" href="#register-form">Adquirir</a>
+                                <a class="btn circle btn-dark border btn-sm" href="{{ url('/registro-usuario') }}">Adquirir</a>
                             </li>
                         </ul>
                     </div>
@@ -120,7 +120,7 @@ active
                             <li>Simuladores virtuales de exámenes</li>
                             <li>Banco de preguntas de CEPUs pasados</li>
                             <li class="footer">
-                                <a class="btn circle btn-theme effect btn-sm" href="#register-form">Adquirir</a>
+                                <a class="btn circle btn-theme effect btn-sm" href="{{ url('/registro-usuario') }}">Adquirir</a>
                             </li>
                         </ul>
                     </div>

@@ -100,6 +100,7 @@ Route::middleware(['auth'])->group(function () {
                 Route::post('/enviar-voucher','Usuario\CotizacionesController@procesarVoucher');
                 Route::get('/medios-de-pago','Usuario\CotizacionesController@mostrarMediosdePago');
                 Route::get('/mis-matriculas','Usuario\MatriculasController@listaMatriculas');
+                Route::get('/cepu-invierno','Usuario\MatriculasController@listaCepu');
 
 
                 Route::get('/perfil/modificar','Usuario\PerfilController@obterperfil');
